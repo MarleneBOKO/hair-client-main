@@ -23,7 +23,7 @@
           <div class="w-1/2 px-3 xl:w-1/4">
             <div class="flex items-center w-full p-6 mb-6 space-x-4 text-blue-400 bg-white rounded-lg xl:mb-0">
               <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full">
-                <img src="../../../public/images/dash/booking.png" alt="" class="w-10 h-w-10">
+                <img src="/images/dash/booking.png" alt="" class="w-10 h-w-10">
               </div>
               <div class="text-gray-700">
                 <p class="text-3xl font-semibold">{{ salonInfo.count_rendezvous }}</p>
@@ -34,7 +34,7 @@
           <div class="w-1/2 px-3 xl:w-1/4">
             <div class="flex items-center w-full p-6 mb-6 space-x-4 text-blue-400 bg-white rounded-lg xl:mb-0">
               <div class="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full">
-                <img src="../../../public/images/dash/hairdresser (1).png" alt="" class="w-10 h-w-10">
+                <img src="/images/dash/hairdresser (1).png" alt="" class="w-10 h-w-10">
               </div>
               <div class="text-gray-700">
                 <p class="text-3xl font-semibold">{{ salonInfo.count_employes }}</p>
@@ -45,7 +45,7 @@
           <div class="w-1/2 px-3 xl:w-1/4">
             <div class="flex items-center w-full p-6 space-x-4 text-blue-400 bg-white rounded-lg">
               <div class="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full">
-                <img src="../../../public/images/dash/procedure.png" alt="" class="w-10 h-w-10">
+                <img src="/images/dash/procedure.png" alt="" class="w-10 h-w-10">
               </div>
               <div class="text-gray-700">
                 <p class="text-3xl font-semibold">{{ salonInfo.count_coiffures }}</p>
@@ -56,7 +56,7 @@
           <div class="w-1/2 px-3 xl:w-1/4">
             <div class="flex items-center w-full p-6 space-x-4 text-blue-400 bg-white rounded-lg">
               <div class="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full">
-                <img src="../../../public/images/dash/customer-service.png" alt="" class="w-10 h-w-10">
+                <img src="/images/dash/customer-service.png" alt="" class="w-10 h-w-10">
               </div>
               <div class="text-gray-700">
                 <p class="text-3xl font-semibold">{{ salonInfo.count_clients }}</p>
@@ -94,7 +94,7 @@
             <span class="ml-6">{{ rendezVous.total_amount }}</span>
             <span class="ml-6">{{ rendezVous.client }}</span>
             <span class="ml-6">{{ rendezVous.status }}</span>
-            <button @click="terminerRendezVous(rendezVous.id_appointment)" class="ml-6 bg-green-500 text-white p-2 rounded">Terminer</button>
+            <button @click="terminerRendezVous(rendezVous.id_appointment)" class="p-2 ml-6 text-white bg-green-500 rounded">Terminer</button>
           </div>
         </div>
           </div>

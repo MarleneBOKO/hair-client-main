@@ -93,7 +93,7 @@ const onRegisterClient = () => {
             </div>
             <div class="flex flex-row mt-9 " v-if="clientData">
                 <div class="w-1/5 flex flex-col space-y-1">
-                    <img src="../../public/images/tresses/télécharger (11).jpeg" alt="" class="rounded-full w-32 h-32">
+                    <img src="/images/tresses/télécharger (11).jpeg" alt="" class="rounded-full w-32 h-32">
                     <span>{{ clientData.name }}</span>
                         <span>{{ clientData.email }}</span>
 

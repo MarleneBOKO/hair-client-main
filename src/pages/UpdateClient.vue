@@ -60,10 +60,10 @@ const onSubmit = () => {
 
 <template>
   <div class="flex flex-row">
-    <div class="flex flex-1 flex_col items-center justify-center">
+    <div class="flex items-center justify-center flex-1 flex_col">
       <form @submit.prevent="onSubmit" class="flex flex-col gap-3">
         <div class="flex items-center justify-center">
-          <h2 class="font-bold text-lg">Modifier les informations du client</h2>
+          <h2 class="text-lg font-bold">Modifier les informations du client</h2>
         </div>
         <div class="mb-4">
           <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
@@ -71,29 +71,29 @@ const onSubmit = () => {
         </div>
         <div class="mb-4">
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" v-model="form.email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Email">
+          <input type="email" v-model="form.email" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Email">
         </div>
         <div class="mb-4">
           <label for="phone" class="block text-sm font-medium text-gray-700">Téléphone</label>
-          <input type="text" v-model="form.phone_number" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Téléphone">
+          <input type="text" v-model="form.phone_number" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Téléphone">
         </div>
         <div class="mb-4">
           <label for="address" class="block text-sm font-medium text-gray-700">Adresse</label>
-          <input type="text" v-model="form.address" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Adresse">
+          <input type="text" v-model="form.address" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Adresse">
         </div>
         <div class="mb-4">
           <label for="birth_date" class="block text-sm font-medium text-gray-700">Date de naissance</label>
-          <input type="date" v-model="form.birth_date" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          <input type="date" v-model="form.birth_date" class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
         </div>
         <div class="mb-4">
           <label for="gender" class="block text-sm font-medium text-gray-700">Genre</label>
-          <input type="text" v-model="form.gender" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Genre">
+          <input type="text" v-model="form.gender" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Genre">
         </div>
         <div class="mb-4">
           <label for="notes" class="block text-sm font-medium text-gray-700">Notes</label>
-          <textarea v-model="form.notes" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Notes"></textarea>
+          <textarea v-model="form.notes" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Notes"></textarea>
         </div>
-        <button type="submit" class="w-full bg-black hover:bg-black text-white font-semibold py-2 px-4 rounded-md">
+        <button type="submit" class="w-full px-4 py-2 font-semibold text-white bg-black rounded-md hover:bg-black">
           Mettre à jour
         </button>
         <div v-if="message" class="message">{{ message }}</div>

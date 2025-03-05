@@ -5,7 +5,7 @@ import { useRouter, useRoute } from 'vue-router';
 import { create_rdv } from '../services/salon';
 import { useToast } from 'vue-toastification';
 import Modal from './ModalRdv.vue';
-import Header from '../pages/Header.vue';
+import Header from './Header.vue';
 
 const token = localStorage.getItem("token");
 const config = {
@@ -314,7 +314,7 @@ const setPaymentMethod = (method) => {
             <a href="#">Contact</a>
           </div>
           <div class="flex flex-row space-x-4">
-            <img src="../../public/images/logo_footer.png" alt="" class="h-20 w-25">
+            <img src="/images/logo_footer.png" alt="" class="h-20 w-25">
             <p>© 2024 HairHub Tous les droits réservés</p>
           </div>
         </div>

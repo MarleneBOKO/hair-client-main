@@ -1,27 +1,27 @@
 <template>
     <div class="flex flex-row">
-      <div class="flex flex-1 flex_col items-center justify-center">
+      <div class="flex items-center justify-center flex-1 flex_col">
         <form @submit.prevent="onSubmit" class="flex flex-col gap-3">
           <div class="flex items-center justify-center">
-            <h2 class="font-bold text-lg">Modifier les informations de la coiffure</h2>
+            <h2 class="text-lg font-bold">Modifier les informations de la coiffure</h2>
           </div>
           <div class="grid grid-cols-2 gap-20 p-8">
             
   
             <div>
               <div class="mb-4">
-                <label for="price" class="block text-gray-700 font-bold mb-2">Prix :</label>
+                <label for="price" class="block mb-2 font-bold text-gray-700">Prix :</label>
                 <input type="number" v-model="form.price" id="price" name="price" required class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
               </div>
   
               <div class="mb-4">
-                <label for="nb_employe" class="block text-gray-700 font-bold mb-2">Nombre d'employés :</label>
+                <label for="nb_employe" class="block mb-2 font-bold text-gray-700">Nombre d'employés :</label>
                 <input type="number" v-model="form.nb_employe" id="nb_employe" name="nb_employe" required class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
               </div>
             </div>
           </div>
   
-          <button type="submit" class="w-full bg-black hover:bg-black text-white font-semibold py-2 px-4 rounded-md">
+          <button type="submit" class="w-full px-4 py-2 font-semibold text-white bg-black rounded-md hover:bg-black">
             Mettre à jour
           </button>
           

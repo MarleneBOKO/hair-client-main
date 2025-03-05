@@ -37,19 +37,19 @@ const onSubmit = () => {
 
 
 <template>
-  <div class="min-w-screen min-h-screen flex items-center justify-center px-5 py-5 text-black">
-    <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
-      <h2 class="text-2xl font-semibold mb-6">Évaluation</h2>
+  <div class="flex items-center justify-center min-h-screen px-5 py-5 text-black min-w-screen">
+    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+      <h2 class="mb-6 text-2xl font-semibold">Évaluation</h2>
       <form @submit.prevent="onSubmit">
         <div class="mb-4">
           <label for="comment" class="block text-sm font-medium text-gray-700">Commentaire</label>
-          <textarea v-model="form.comment" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Commentaire"></textarea>
+          <textarea v-model="form.comment" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Commentaire"></textarea>
         </div>
         <div class="mb-4">
           <label for="note" class="block text-sm font-medium text-gray-700">Note</label>
-          <input type="number" v-model="form.note" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Note">
+          <input type="number" v-model="form.note" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Note">
         </div>
-        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md">
+        <button type="submit" class="w-full px-4 py-2 font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
           Envoyer
         </button>
       </form>

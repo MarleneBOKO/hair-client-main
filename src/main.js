@@ -13,7 +13,7 @@ const options = {
 
 const app = createApp(App);
 
-app.use(store); // Ensure Vuex store is registered
+app.use(store);
 app.use(Toast, options); // Register Toast plugin with options
 app.use(router);
 

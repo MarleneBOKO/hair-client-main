@@ -67,10 +67,10 @@ const onSubmit = async () => {
 
 <template>
   <div class="flex flex-row">
-    <div class="flex flex-1 flex_col items-center justify-center">
+    <div class="flex items-center justify-center flex-1 flex_col">
       <form @submit.prevent="onSubmit" class="flex flex-col gap-3">
         <div class="flex items-center justify-center">
-          <h2 class="font-bold text-lg">Modifier les informations du salon</h2>
+          <h2 class="text-lg font-bold">Modifier les informations du salon</h2>
         </div>
         <div class="mb-4">
           <label for="salon_name" class="block text-sm font-medium text-gray-700">Nom du salon</label>
@@ -78,66 +78,66 @@ const onSubmit = async () => {
         </div>
         <div class="mb-4">
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" v-model="form.email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Email">
+          <input type="email" v-model="form.email" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Email">
         </div>
         <div class="mb-4">
           <label for="phone" class="block text-sm font-medium text-gray-700">Téléphone</label>
-          <input type="text" v-model="form.phone_number" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Téléphone">
+          <input type="text" v-model="form.phone_number" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Téléphone">
         </div>
         <div class="mb-4">
           <label for="address" class="block text-sm font-medium text-gray-700">Adresse</label>
-          <input type="text" v-model="form.address" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Adresse">
+          <input type="text" v-model="form.address" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Adresse">
         </div>
         <div class="mb-4">
           <label for="website" class="block text-sm font-medium text-gray-700">Site web</label>
-          <input type="text" v-model="form.website" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Site web">
+          <input type="text" v-model="form.website" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Site web">
         </div>
         <div class="mb-4">
           <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-          <textarea v-model="form.description" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Description"></textarea>
+          <textarea v-model="form.description" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Description"></textarea>
         </div>
         <div class="mb-4">
           <label for="opening_hours" class="block text-sm font-medium text-gray-700">Heures d'ouverture</label>
-          <textarea v-model="form.opening_hours" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Heures d'ouverture"></textarea>
+          <textarea v-model="form.opening_hours" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Heures d'ouverture"></textarea>
         </div>
         <div class="mb-4">
           <label for="creation_date" class="block text-sm font-medium text-gray-700">Date de création</label>
-          <input type="date" v-model="form.creation_date" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          <input type="date" v-model="form.creation_date" class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
         </div>
         <div class="mb-4">
           <label for="last_update_date" class="block text-sm font-medium text-gray-700">Dernière date de modification</label>
-          <input type="date" v-model="form.last_update_date" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          <input type="date" v-model="form.last_update_date" class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
         </div>
         <div class="mb-4">
           <label for="longitude" class="block text-sm font-medium text-gray-700">Longitude</label>
-          <input type="text" v-model="form.longitude" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Longitude">
+          <input type="text" v-model="form.longitude" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Longitude">
         </div>
         <div class="mb-4">
           <label for="latitude" class="block text-sm font-medium text-gray-700">Latitude</label>
-          <input type="text" v-model="form.latitude" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="Latitude">
+          <input type="text" v-model="form.latitude" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="Latitude">
         </div>
         <div class="mb-4">
           <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
-          <input type="file" id="image" name="image" @change="handleFileUpload" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          <input type="file" id="image" name="image" @change="handleFileUpload" class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
         </div>
         <div class="mb-4">
           <label for="percent" class="block text-sm font-medium text-gray-700">Pourcentage</label>
-          <input type="number" v-model="form.percent" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="percent">
+          <input type="number" v-model="form.percent" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="percent">
         </div>
        
         <div class="mb-4">
           <label for="percent_cancel" class="block text-sm font-medium text-gray-700">Pourcentage d'annulation</label>
-          <input type="number" v-model="form.percent_cancel" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="percent_cancel">
+          <input type="number" v-model="form.percent_cancel" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="percent_cancel">
         </div> 
         <div class="mb-4">
           <label for="heure_debut" class="block text-sm font-medium text-gray-700">Heure d'ouverture</label>
-          <input type="time" v-model="form.heure_debut" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="heure_debut">
+          <input type="time" v-model="form.heure_debut" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="heure_debut">
         </div>
         <div class="mb-4">
           <label for="heure_fin" class="block text-sm font-medium text-gray-700">Heure de fermeture</label>
-          <input type="time" v-model="form.heure_fin" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="heure_fin">
+          <input type="time" v-model="form.heure_fin" class="block w-full p-2 mt-1 border border-gray-300 rounded-md" placeholder="heure_fin">
         </div>
-        <button type="submit" class="w-full bg-black hover:bg-black text-white font-semibold py-2 px-4 rounded-md">
+        <button type="submit" class="w-full px-4 py-2 font-semibold text-white bg-black rounded-md hover:bg-black">
           Mettre à jour
         </button>
         

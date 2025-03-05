@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useToast } from 'vue-toastification';
-import { register_client } from '../services/auth';
+import { register_client } from './services/auth';
 import { useRoute } from 'vue-router';
 
 const toast = useToast();

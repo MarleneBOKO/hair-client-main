@@ -85,7 +85,7 @@ function navigateToReservationWithDetails(id_salon, id_hairstyle_type, price,  p
                 </div>
               </div>
               <div class="flex items-center justify-between space-x-1">
-                <img src="../../public/images/modal/star.png" alt="" class="w-3 h-3">
+                <img src="/images/modal/star.png" alt="" class="w-3 h-3">
                 <span class="text-[#D9D9D9] font-light">3</span>
               </div>
             </div>

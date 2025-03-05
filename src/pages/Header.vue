@@ -60,10 +60,10 @@ const logoutUser = async () => {
 <template>
   <div :class="{'shadow-md': shouldApplyShadow}" class="fixed top-0 z-20 flex items-center justify-between transition-all duration-100 bg-white">
      <div class="w-10 h-15">
-         <img src="../../public/images/menu (1) 1.png" alt="">
+         <img src="/images/menu (1) 1.png" alt="">
      </div>
      <div class="flex items-center justify-center">
-         <img src="../../public/images/Ruth (1) 1.png" alt="" class="object-cover w-44 h-28">
+         <img src="/images/Ruth(1).png" alt="" class="object-cover w-44 h-28">
      </div>
      <div class="space-x-2 text-[15px] font-medium">
        <div v-if="userName" class="relative flex space-x-1">

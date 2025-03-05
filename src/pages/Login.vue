@@ -144,7 +144,7 @@ const onSubmit = async () => {
     </div>
 
     <div style="width: 45%; position: relative;">
-      <img class="object-cover h-screen" src="../../public/images/A Photographer Is Taking Beautiful Photos Of Black Girls Getting Their Hair Done.jpeg" alt="" style="width: 100%;">
+      <img class="object-cover h-screen" src="/images/A Photographer Is Taking Beautiful Photos Of Black Girls Getting Their Hair Done.jpeg" alt="" style="width: 100%;">
     </div>
   </div>
 </template>

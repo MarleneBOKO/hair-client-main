@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
-import Header from '../pages/Header.vue';
-import Footer from '../pages/Footer.vue';
+import Header from './Header.vue';
+import Footer from './Footer.vue';
 import Modal_coif_acc from './Modal_coif_acc.vue';
 import Modal_acc from './Modal_acc.vue';
 import axios from "axios";
@@ -14,29 +14,29 @@ const config = {
 };
 
 const images = [
-  "../../public/images/home1/1.png",
-  "../../public/images/home1/2.png",
-  "../../public/images/home1/3.png",
-  "../../public/images/home1/4.png",
-  "../../public/images/home1/5.png",
-  "../../public/images/home1/6.jpeg",
-  "../../public/images/home1/7.png",
-  "../../public/images/home1/8.png",
-  "../../public/images/home1/9.png",
-  "../../public/images/home1/10.png",
-  "../../public/images/home1/11.jpeg",
-  "../../public/images/home1/12.png",
-  "../../public/images/home1/13.png",
-  "../../public/images/home1/14.jpeg",
-  "../../public/images/home1/15.png",
-  "../../public/images/home1/16.png",
-  "../../public/images/home1/17.png",
-  "../../public/images/home1/15.png",
-  "../../public/images/home1/15.png",
-  "../../public/images/home1/15.png",
-  "../../public/images/home1/15.png",
-  "../../public/images/home1/15.png",
-  "../../public/images/home1/15.png",
+  "/images/home1/1.png",
+  "/images/home1/2.png",
+  "/images/home1/3.png",
+  "/images/home1/4.png",
+  "/images/home1/5.png",
+  "/images/home1/6.jpeg",
+  "/images/home1/7.png",
+  "/images/home1/8.png",
+  "/images/home1/9.png",
+  "/images/home1/10.png",
+  "/images/home1/11.jpeg",
+  "/images/home1/12.png",
+  "/images/home1/13.png",
+  "/images/home1/14.jpeg",
+  "/images/home1/15.png",
+  "/images/home1/16.png",
+  "/images/home1/17.png",
+  "/images/home1/15.png",
+  "/images/home1/15.png",
+  "/images/home1/15.png",
+  "/images/home1/15.png",
+  "/images/home1/15.png",
+  "/images/home1/15.png",
 
 ];
 
@@ -303,7 +303,7 @@ onMounted(() => {
                         <div class="w-[160px] h-[160px] bg-[#667D45] absolute" style="top: -15px; right: -15px;"></div>
                         <div class="flex flex-col rounded-md shadow-md">
                             <div class="z-10 flex flex-row rounded-md">
-                                <img src="../../public/images/télécharger (17) 1.png" alt="" class="shadow-xl">
+                                <img src="/images/télécharger (17) 1.png" alt="" class="shadow-xl">
                             </div>
                             <div class="flex flex-col p-4 space-y-6">
                                 <h1 class="font-medium text-[36px]">
@@ -314,9 +314,9 @@ onMounted(() => {
                                         <span class="text-[20px] font-light">{{ salon.address }}</span>
                                     </div>
                                     <div class="flex flex-row m-6 space-x-3">
-                                        <img src="../../public/images/Heart (1) 2.svg" alt="">
-                                        <img src="../../public/images/Heart 6.svg" alt="">
-                                        <img src="../../public/images/Heart 6.svg" alt="">
+                                        <img src="/images/Heart (1) 2.svg" alt="">
+                                        <img src="/images/Heart 6.svg" alt="">
+                                        <img src="/images/Heart 6.svg" alt="">
                                     </div>
                                 </div>
                                 <div class="flex space-x-2">
@@ -340,7 +340,7 @@ onMounted(() => {
                 <a href="#">Contact</a>
             </div>
             <div class="flex flex-row space-x-4">
-                <img src="../../public/images/logo_footer.png" alt="" class="h-20 w-25">
+                <img src="/images/logo_footer.png" alt="" class="h-20 w-25">
                 <p>© 2024 HairHub Tous les droits réservés</p>
             </div>
         </div>

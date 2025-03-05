@@ -30,7 +30,7 @@
                         </svg>
                     </div>
                     <div class="flex gap-3 " >
-                        <img src="../../public/images/modal/télécharger (20) 1.png" alt="" class="w-10 h-10 rounded-full">
+                        <img src="/images/modal/télécharger (20) 1.png" alt="" class="w-10 h-10 rounded-full">
                         <div class="flex flex-col text-xs">
                             <h4>Marlene</h4>
                             <span>Super Admin</span>
@@ -48,7 +48,7 @@
         <div class="flex">
             <div class="flex flex-col p-5 bg-white h-screen gap-6" style="width: 15%;">
                 <div class="flex flex-col items-center justify-center">
-                    <img src="../../public/images/modal/Chic.jpeg" alt="" class="w-12 h-12 rounded-full">
+                    <img src="/images/modal/Chic.jpeg" alt="" class="w-12 h-12 rounded-full">
 
                 </div>
                 <div class="flex flex-col ">

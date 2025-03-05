@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ref, onMounted, watch, defineEmits } from 'vue';
 import { useToast } from "vue-toastification";
 import { useRouter } from 'vue-router';
-import { create_type_coif_salon } from '../services/salon';
+import { create_type_coif_salon } from './services/salon';
 
 const token = localStorage.getItem("token");
 

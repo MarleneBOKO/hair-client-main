@@ -60,7 +60,7 @@ function showMoreImages() {
     <div class="flex flex-col">
       <div class="relative">
         <div class="relative flex flex-row p-6 rounded-md">
-          <img src="../../public/images/salon_page/Peluquería.jpeg" alt="" class="w-screen h-[398px] object-cover">
+          <img src="/images/salon_page/Peluquería.jpeg" alt="" class="w-screen h-[398px] object-cover">
           <div class="absolute z-10 mt-8 ml-8">
             <h1 class="font-bold text-[90px] text-white">{{ salon?.name }}</h1>
             <p class="font-bold text-[25px] text-white mt-2">{{ salon?.description }}</p>
@@ -84,16 +84,16 @@ function showMoreImages() {
       <div class="bg-[#EFE6D8] flex flex-col p-5">
         <div class="flex flex-row space-x-3 h-[397px]">
           <div class="-translate-y-40">
-            <img src="../../public/images/salon_page/Best Christmas Hairstyles for Little Girls in Nigeria 2023 - Kaybee Fashion Styles 2.png" alt="" class=""> 
+            <img src="/images/salon_page/Best Christmas Hairstyles for Little Girls in Nigeria 2023 - Kaybee Fashion Styles 2.png" alt="" class=""> 
           </div>
           <div class="flex items-center justify-center"> 
             <div class="ml-24 -translate-y-20">
-              <img src="../../public/images/salon_page/Epsilon - Spaceworks 1.png" alt=""> 
+              <img src="/images/salon_page/Epsilon - Spaceworks 1.png" alt=""> 
             </div>
             <div>
               <div class="flex flex-col space-y-3 ml-36">
-                <img src="../../public/images/salon_page/Aesthetic neutral spa shampoo bowl 1.png" alt="" class="-translate-y-52">
-                <img src="../../public/images/salon_page/Ensaio corporativo cabeleireira 1.png" alt="" class="-translate-y-52">
+                <img src="/images/salon_page/Aesthetic neutral spa shampoo bowl 1.png" alt="" class="-translate-y-52">
+                <img src="/images/salon_page/Ensaio corporativo cabeleireira 1.png" alt="" class="-translate-y-52">
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ function showMoreImages() {
         <a href="#">Contact</a>
       </div>
       <div class="flex flex-row space-x-4">
-        <img src="../../public/images/logo_footer.png" alt="" class="h-20 w-25">
+        <img src="/images/logo_footer.png" alt="" class="h-20 w-25">
         <p>© 2024 HairHub Tous les droits réservés</p>     
       </div>
     </div>

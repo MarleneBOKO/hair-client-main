@@ -83,14 +83,14 @@ const saveAndNew = async () => {
 <template>
     <div class="flex flex-row gap-20 bg-gray-200 ">
     <div style="width: 45%; position: relative;">
-      <img class="object-cover h-screen" src="../../public/images/salon/Mur vert de gris salon de coiffure.jpeg" alt="" style="width: 100%;">
+      <img class="object-cover h-screen" src="/images/salon/Mur vert de gris salon de coiffure.jpeg" alt="" style="width: 100%;">
       <div class="absolute top-0 left-0 right-0 mt-12 text-center">
         <h1 class="text-xl ">Créer votre salon </h1>
         <h6>Une nouvelle aventure commence pour vous</h6>
       </div>
     </div>
   <div class="flex flex-col flex-1">
-    <img src="../../public/images/Acc/Frame 2.png" alt="" class="object-cover w-[1000px] h-40 mr-4">
+    <img src="/images/Acc/Frame 2.png" alt="" class="object-cover w-[1000px] h-40 mr-4">
     <form @submit.prevent="saveAccessory" class="p-3 overflow-hidden ">
 
     <div class="flex flex-col p-8">

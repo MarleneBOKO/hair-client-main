@@ -66,7 +66,7 @@ const handleSubmit = async () => {
 <template>
       <div class="flex flex-row gap-20 bg-gray-200">
     <div style="width: 45%; position: relative;">
-      <img class="object-cover h-screen" src="../../public/images/salon/Mur vert de gris salon de coiffure.jpeg" alt="" style="width: 100%;">
+      <img class="object-cover h-screen" src="/images/salon/Mur vert de gris salon de coiffure.jpeg" alt="" style="width: 100%;">
       <div class="absolute top-0 left-0 right-0 mt-12 text-center">
         <h1 class="text-xl ">Créer votre salon </h1>
         <h6>Une nouvelle aventure commence pour vous</h6>
@@ -109,7 +109,7 @@ const handleSubmit = async () => {
         <label for="photo1" class="block text-sm font-medium text-gray-700">Télécharger la photo recto de la carte CIP :</label>
         <input type="file" id="photo1" @change="handleFileChange($event, 'photo1')" class="block p-2 mt-1 border border-gray-300 rounded-md w-96">
 
-        <label for="photo2"class="block text-sm font-medium text-gray-700">Télécharger la photo verso de la carte CIP :</label>
+        <label for="photo2" class="block text-sm font-medium text-gray-700">Télécharger la photo verso de la carte CIP :</label>
         <input type="file" id="photo2" @change="handleFileChange($event, 'photo2')" class="block p-2 mt-1 border border-gray-300 rounded-md w-96">
       </div>
 

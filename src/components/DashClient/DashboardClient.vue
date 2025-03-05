@@ -110,7 +110,7 @@ onMounted(() => {
         <div class="w-1/2 px-3 xl:w-1/4">
           <div class="flex items-center w-full p-6 mb-6 space-x-4 text-blue-400 bg-white rounded-lg xl:mb-0">
             <div class="flex items-center justify-center w-16 h-16 bg-[#D2D2EB] rounded-full">
-              <img src="../../../public/images/dash/booking.png" alt="" class="w-10 h-10">
+              <img src="/images/dash/booking.png" alt="" class="w-10 h-10">
             </div>
             <div class="text-[#2A2C24]">
               <p class="text-3xl font-semibold">{{ rdvInfo.count_rdv }}</p>
@@ -122,7 +122,7 @@ onMounted(() => {
         <div class="w-1/2 px-3 xl:w-1/4">
           <div class="flex items-center w-full p-6 space-x-4 text-blue-400 bg-white rounded-lg">
             <div class="flex items-center justify-center w-16 h-16 bg-[#AA9D9F] rounded-full">
-              <img src="../../../public/images/dash/procedure.png" alt="" class="w-10 h-w-10">
+              <img src="/images/dash/procedure.png" alt="" class="w-10 h-w-10">
             </div>
             <div class="text-[#2A2C24]">
               <p class="text-3xl font-semibold">{{ rdvInfo.somme }} FCFA</p>

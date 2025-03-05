@@ -7,7 +7,7 @@
     <div class="bg-[#EFE6D8] flex flex-col p-2">
         <div class="bg-white flex flex-row justify-between items-center rounded-ss-[150px] ">
             <div>
-                <img src="../../public/images/presentations/Ruth (1) 2.png" alt="">
+                <img src="/images/presentations/Ruth (1) 2.png" alt="">
             </div>
             <div class="flex flex-row space-x-4 p-4">
                 <div style="background-color: rgba(102, 125, 69, 0.46);" class="  right-4 px-4 h-12 w-auto text-center flex justify-center items-center text-[#667D45] font-semibold rounded-md">
@@ -31,7 +31,7 @@
             </div>
             </div>
             <div class="flex flex-row ">
-                    <img src="../../public/images/presentations/Salão de Beleza 1 1 (1).png" alt="" class=" h-[450px] mt-48 mr-16">
+                    <img src="/images/presentations/Salão de Beleza 1 1 (1).png" alt="" class=" h-[450px] mt-48 mr-16">
 
                 <img src="/public/images/presentations/télécharger (17) 3 (1).png" alt="" class="h-96 mr-6">
             </div>

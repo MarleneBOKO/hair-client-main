@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { useToast } from "vue-toastification";
 import { useRouter } from 'vue-router';
-import { client } from '../services/auth';
+import { client } from './services/auth';
 
 const toast = useToast();
 const router = useRouter();
@@ -74,7 +74,7 @@ const onRegisterClient = () => {
             </div>
             <div class="flex flex-row mt-9">
                 <div class="w-1/5 flex flex-col space-y-1">
-                    <img src="../../public/images/tresses/télécharger (11).jpeg" alt="" class="rounded-full w-32 h-32">
+                    <img src="/images/tresses/télécharger (11).jpeg" alt="" class="rounded-full w-32 h-32">
                     <span>. David Smith</span>
                     <span>ruthboko23@gmail.com</span>
                     <span>66776655</span>

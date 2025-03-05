@@ -37,7 +37,7 @@ onMounted(() => {
         <div class=" flex flex-col gap-2 flex-1" v-if="clientData">
             <div class="flex flex-col gap-4 items-center justify-between bg-[#EFE6D8]" style="height: 40%;">
                 <div class="flex flex-row gap-3 p-4">
-                    <img src="../../public/images/pexels-husamettin-akgun-1162768-3779853.jpg" class="w-40 h-40 rounded-full"/>
+                    <img src="/images/pexels-husamettin-akgun-1162768-3779853.jpg" class="w-40 h-40 rounded-full"/>
                 </div>
                 <span class="flex justify-center items-center">Welcom {{ clientData.name }}</span>
             </div>

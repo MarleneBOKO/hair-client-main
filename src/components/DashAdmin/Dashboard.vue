@@ -98,7 +98,7 @@ onMounted(async () => {
               <div class="w-full bg-white space-x-4 text-[#D2D2EB] rounded-lg flex items-center p-6 mb-6 xl:mb-0">
                 <div class="flex items-center justify-center w-16 h-16 bg-[#D2D2EB] rounded-full">
 
-                    <img src="../../../public/images/dash/hairdresser-barber-shop-hair-salon-hair-studio-svgrepo-com.png" alt="" class="w-10 h-w-10">
+                    <img src="/images/dash/hairdresser-barber-shop-hair-salon-hair-studio-svgrepo-com.png" alt="" class="w-10 h-w-10">
                 </div>
                 <div class="text-[#2A2C24]">
                      <p class="text-3xl font-semibold">{{ salonInfos.count_salons }}</p>
@@ -111,7 +111,7 @@ onMounted(async () => {
             <div class="w-1/2 px-3 xl:w-1/4 ">
               <div class="flex items-center w-full p-6 mb-6 space-x-4 text-blue-400 bg-white rounded-lg xl:mb-0">
                 <div class="flex items-center justify-center w-16 h-16 bg-[#AA9D9F] rounded-full">
-                    <img src="../../../public/images/dash/disable-eye-inactive-svgrepo-com.png" alt="" class="w-10 h-w-10">
+                    <img src="/images/dash/disable-eye-inactive-svgrepo-com.png" alt="" class="w-10 h-w-10">
 
                 </div>
                 <div class="text-[#2A2C24]">
@@ -125,7 +125,7 @@ onMounted(async () => {
               <div class="flex items-center w-full p-6 space-x-4 text-blue-400 bg-white rounded-lg">
                 <div class="flex items-center justify-center w-16 h-16 rounded-full bg-[#826D62]">
 
-                    <img src="../../../public/images/dash/active-svgrepo-com.png" alt="" class="w-10 h-w-10">
+                    <img src="/images/dash/active-svgrepo-com.png" alt="" class="w-10 h-w-10">
                 </div>
 
                 <div class="text-[#2A2C24]">
@@ -139,7 +139,7 @@ onMounted(async () => {
             <div class="w-1/2 px-3 xl:w-1/4">
           <div class="flex items-center w-full p-6 mb-6 space-x-4 text-blue-400 bg-white rounded-lg xl:mb-0">
             <div class="flex items-center justify-center w-16 h-16 bg-[#585B4C] rounded-full">
-              <img src="../../../public/images/dash/hairstyle-2-svgrepo-com.png" alt="" class="w-10 h-10">
+              <img src="/images/dash/hairstyle-2-svgrepo-com.png" alt="" class="w-10 h-10">
 
             </div>
             <div class="text-[#2A2C24]">
