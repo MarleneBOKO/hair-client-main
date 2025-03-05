@@ -8,7 +8,7 @@ const config = {
     }
 };
 
-const BASE_URL = "https://hair-api-main-production.up.railway.app/api/"; // URL de l'API déployée
+const BASE_URL = "https://hair-api-main-production.up.railway.app/api"; // URL de l'API déployée
 
 export function login(email, password) {
     return axios.post(`${BASE_URL}/login`, {
