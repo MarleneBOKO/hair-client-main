@@ -42,7 +42,7 @@ watch(completeService, async (newVal) => {
 
     if (newVal) {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/accessoires/${hairstyle_type_id.value}/${salon_id.value}`, config);
+            const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/accessoires/${hairstyle_type_id.value}/${salon_id.value}`, config);
             accessories.value = response.data.data;
         } catch (error) {
             toast.error('Erreur lors de la récupération des accessoires', { timeout: 5000 });
@@ -76,7 +76,7 @@ const availableHours = ref([]);
 const fetchAvailableHours = async () => {
     const selectedDate = form.value.date_and_time.split('T')[0];
     try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/getHours/${hairstyle_type_id.value}/${selectedDate}`, config);
+        const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getHours/${hairstyle_type_id.value}/${selectedDate}`, config);
         const data = response.data;
 
         availableEmployees.value = data.employes;

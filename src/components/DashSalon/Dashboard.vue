@@ -114,7 +114,7 @@
   // Fonction pour récupérer les rendez-vous du salon
   const getRendezVousForSalon = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/getRendezVousForSalon', config);
+      const response = await axios.get('https://hair-api-main-production.up.railway.app/api/getRendezVousForSalon', config);
       console.log('Response data:', response.data); 
       rendezVousList.value = response.data.map(rendezVous => ({
         id_appointment: rendezVous.id_appointment,
@@ -137,7 +137,7 @@
   });
   const terminerRendezVous = async (id) => {
   try {
-    const response = await axios.get(`http://127.0.0.1:8000/api/Terminer/${id}`, config);
+    const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/Terminer/${id}`, config);
     console.log('Rendez-vous terminé:', response.data);
     // Mettre à jour la liste des rendez-vous pour refléter les modifications
     await getRendezVousForSalon();
@@ -152,7 +152,7 @@
 
 onMounted(async () => {
  try {
-    const response = await axios.get('http://127.0.0.1:8000/api/user', {
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/user', {
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token")
       }
@@ -186,7 +186,7 @@ onMounted(async () => {
   // Fonction pour récupérer les informations du salon
   const getSalonInfo = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/getInfoSalon', config);
+      const response = await axios.get('https://hair-api-main-production.up.railway.app/api/getInfoSalon', config);
       salonInfo.value = response.data;
       console.log(salonInfo.value);
     } catch (error) {

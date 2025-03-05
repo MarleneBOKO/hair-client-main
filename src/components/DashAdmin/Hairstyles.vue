@@ -14,7 +14,7 @@ const toast = useToast();
 
 onMounted(async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/getAllcoiffures', config);
+    const response = await fetch('https://hair-api-main-production.up.railway.app/api/getAllcoiffures', config);
     const data = await response.json();
     hairstyles.value = data.data;
     console.log(hairstyles.value);
@@ -31,7 +31,7 @@ const confirmDelete = (id) => {
 
 const onDelete = async (id) => {
   try {
-    const response = await fetch(`http://127.0.0.1:8000/api/coiffures/${id}`, {
+    const response = await fetch(`https://hair-api-main-production.up.railway.app/api/coiffures/${id}`, {
       method: 'DELETE',
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token")
@@ -72,10 +72,10 @@ const onDelete = async (id) => {
       <div class="flex flex-col gap-4 p-6">
         <div class="grid grid-cols-3 gap-8 mt-8">
           <div v-for="hairstyle in hairstyles" :key="hairstyle.id" class="p-4 bg-white rounded-lg shadow-md">
-            <img :src="`http://127.0.0.1:8000/storage/${hairstyle.image}`" :alt="hairstyle.name" class="object-cover mb-4 rounded-lg h-60 w-96">
+            <img :src="`https://hair-api-main-production.up.railway.app/storage/${hairstyle.image}`" :alt="hairstyle.name" class="object-cover mb-4 rounded-lg h-60 w-96">
             <div class="flex flex-row gap-3">
-              <img :src="`http://127.0.0.1:8000/storage/${hairstyle.image1}`" :alt="hairstyle.name" class="object-cover mb-4 rounded-lg h-12 w-12">
-              <img :src="`http://127.0.0.1:8000/storage/${hairstyle.image2}`" :alt="hairstyle.name" class="object-cover mb-4 rounded-lg h-12 w-12">
+              <img :src="`https://hair-api-main-production.up.railway.app/storage/${hairstyle.image1}`" :alt="hairstyle.name" class="object-cover mb-4 rounded-lg h-12 w-12">
+              <img :src="`https://hair-api-main-production.up.railway.app/storage/${hairstyle.image2}`" :alt="hairstyle.name" class="object-cover mb-4 rounded-lg h-12 w-12">
 
             </div>
             <div class="flex flex-col items-center">

@@ -27,7 +27,7 @@
   
   const fetchSalonDetails = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/getSalonshairstyle/${salon_id.value}`);
+      const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getSalonshairstyle/${salon_id.value}`);
       salon.value = response.data;
     } catch (error) {
       console.error("Erreur lors de la récupération des détails du salon :", error);
@@ -67,7 +67,7 @@
           <div class="flex flex-col translate-y-16 space-y-5">
             <div class="flex flex-row justify-between items-center space-x-9" v-for="(hairstyle, index) in remainingHairstyles" :key="index">
               <div class="flex flex-row rounded-md relative" v-for="hairstyle in remainingHairstyles.slice(index * 4, index * 4 + 4)" :key="hairstyle.id">
-                <img :src="`http://127.0.0.1:8000/storage/${hairstyle.image}`" class="object-cover w-[350px] h-[320px] rounded-b-3xl" @click="openModalWithImage(hairstyle.image, hairstyle.thumbnails)">
+                <img :src="`https://hair-api-main-production.up.railway.app/storage/${hairstyle.image}`" class="object-cover w-[350px] h-[320px] rounded-b-3xl" @click="openModalWithImage(hairstyle.image, hairstyle.thumbnails)">
                   <div style="bottom: 0;" class="flex bg-[#EFE6D8] rounded-b-3xl absolute w-[350px] h-[65px] p-2 items-center opacity-40">
                     <span class="font-bold text-[15px] text-black text-center">{{ hairstyle.name }}</span>
                   </div>

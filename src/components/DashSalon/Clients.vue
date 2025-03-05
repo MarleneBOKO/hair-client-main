@@ -11,7 +11,7 @@ const clients = ref([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/salon', config);
+    const response = await fetch('https://hair-api-main-production.up.railway.app/api/salon', config);
     const data = await response.json();
     clients.value = data.data;
   } catch (error) {

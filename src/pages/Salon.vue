@@ -18,7 +18,7 @@ const hairstyles = computed(() => salon.value?.hairstyles || []);
 
 const fetchSalonDetails = async () => {
   try {
-    const response = await axios.get(`http://127.0.0.1:8000/api/getSalonshairstyle/${salon_id.value}`);
+    const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getSalonshairstyle/${salon_id.value}`);
     salon.value = response.data;
     console.log(salon.value);
   } catch (error) {
@@ -102,7 +102,7 @@ function showMoreImages() {
         <div class="grid items-center justify-between grid-cols-4 gap-4 space-y-6">
           <div v-for="(hairstyle, index) in hairstyles" :key="index" class="relative flex flex-row rounded-md">
             <img
-              :src="`http://127.0.0.1:8000/storage/${hairstyle.image}`"
+              :src="`https://hair-api-main-production.up.railway.app/storage/${hairstyle.image}`"
               class="object-cover w-[350px] h-[320px] rounded-3xl"
               @click="openModalWithImage(hairstyle.image, [hairstyle.image1, hairstyle.image2], hairstyle)"
             >

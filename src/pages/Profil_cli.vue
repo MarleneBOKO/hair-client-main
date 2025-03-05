@@ -32,7 +32,7 @@ const errors = ref({
 });
 
 onMounted(() => {
-    axios.get('http://127.0.0.1:8000/api/client', config)
+    axios.get('https://hair-api-main-production.up.railway.app/api/client', config)
         .then(response => {
             clientData.value = response.data.data;
         })
@@ -45,7 +45,7 @@ onMounted(() => {
 const onRegisterClient = () => {
     const { address, phone_number, birth_date, gender, notes } = form.value;
     if (address && phone_number && birth_date && gender && notes) {
-        axios.post('http://127.0.0.1:8000/api/client', form.value, config)
+        axios.post('https://hair-api-main-production.up.railway.app/api/client', form.value, config)
             .then(function (response) {
                 toast.success("Création de compte réussi", {
                     timeout: 5000,

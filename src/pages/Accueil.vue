@@ -75,7 +75,7 @@ const openModalWithImage = (item) => {
 
 const fetchImages = async () => {
   try {
-  const response = await axios.get(`http://127.0.0.1:8000/api/getImagesBySalon/${salonId}`, config);
+  const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getImagesBySalon/${salonId}`, config);
       let allImages = [];
     const seenImages = new Set();
     for (const type in response.data.data) {
@@ -83,7 +83,7 @@ const fetchImages = async () => {
         if (!seenImages.has(item.image)) {
           seenImages.add(item.image);
           allImages.push({
-            src: `http://127.0.0.1:8000/storage/${item.image}`,
+            src: `https://hair-api-main-production.up.railway.app/storage/${item.image}`,
             alt: item.name,
             text: item.name,
             id_hairstyle_type: item.id_hairstyle_type,
@@ -109,7 +109,7 @@ const isModalOpen = ref(false);
 const selectedHairstyle = ref({});
 
 function openModal(hairstyle) {
-  selectedImage.value = `http://127.0.0.1:8000/storage/${hairstyle.image}`;
+  selectedImage.value = `https://hair-api-main-production.up.railway.app/storage/${hairstyle.image}`;
   selectedHairstyle.value = {
     ...hairstyle,
     id_salon: hairstyle.id_salon
@@ -120,7 +120,7 @@ function openModal(hairstyle) {
 const fetchHairstyles = async () => {
   try {
     const salonId = localStorage.getItem('salonId'); 
-    const response = await axios.get(`http://127.0.0.1:8000/api/getAllHairstyles/${salonId}`, config);    
+    const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getAllHairstyles/${salonId}`, config);    
     console.log((response.data.data)); 
     fetchedHairstyles.value = Array.isArray(response.data.data) ? response.data.data : [];
   } catch (error) {
@@ -282,7 +282,7 @@ onMounted(() => {
                 <div class="grid grid-cols-4 gap-4">
                     <div v-for="(hairstyle, index) in salon.hairstyles" :key="index" class="flex flex-col">
                         <div class="rounded-md shadow-md">
-                            <img :src="`http://127.0.0.1:8000/storage/${hairstyle.image}`" :alt="hairstyle.name" class="w-full h-[188px] rounded-md object-cover cursor-pointer" @click="openModal(hairstyle)">
+                            <img :src="`https://hair-api-main-production.up.railway.app/storage/${hairstyle.image}`" :alt="hairstyle.name" class="w-full h-[188px] rounded-md object-cover cursor-pointer" @click="openModal(hairstyle)">
                         </div>
                     </div>
                 </div>

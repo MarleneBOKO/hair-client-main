@@ -39,7 +39,7 @@ const config = {
   
   const onSubmit = async () => {
     try {
-      await axios.post('http://127.0.0.1:8000/api/sendInvitation', { email: form.value.email }, config);
+      await axios.post('https://hair-api-main-production.up.railway.app/api/sendInvitation', { email: form.value.email }, config);
       toast.success('Invitation envoyée avec succès');
       form.value.email = '';  
       route.push('/dashboard')

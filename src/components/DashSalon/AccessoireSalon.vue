@@ -15,7 +15,7 @@ const toast = useToast();
 
 onMounted(async () => {
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/accessory', config);
+        const response = await fetch('https://hair-api-main-production.up.railway.app/api/accessory', config);
         const data = await response.json();
         accessoires.value = data.accessoires;
     } catch (error) {
@@ -26,7 +26,7 @@ onMounted(async () => {
 const onDelete = async (id) => {
     if (confirm("Êtes-vous sûr de vouloir retirer cet accessoire ?")) {
         try {
-            await fetch(`http://127.0.0.1:8000/api/accessory/${id}`, {
+            await fetch(`https://hair-api-main-production.up.railway.app/api/accessory/${id}`, {
                 method: 'DELETE',
                 headers: {
                     ...config.headers,

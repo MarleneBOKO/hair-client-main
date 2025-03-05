@@ -43,7 +43,7 @@ export function create_salon(
         }
     };
 
-    return axios.post("http://127.0.0.1:8000/api/salon", formdata, config, configuration);
+    return axios.post("https://hair-api-main-production.up.railway.app/api/salon", formdata, config, configuration);
 }
 
 
@@ -57,7 +57,7 @@ export function createDocument(ifu, type_photo, photo1, photo2) {
       formData.append("photo2", photo2);
     }
   
-    return axios.post("http://127.0.0.1:8000/api/ActiveSalonInfo",  formData, config)
+    return axios.post("https://hair-api-main-production.up.railway.app/api/ActiveSalonInfo",  formData, config)
   }
 
 
@@ -79,7 +79,7 @@ export function create_employe_salon(name, skills, description, image, hiring_da
     formdata.append("email", email)
 
    
-    return axios.post("http://127.0.0.1:8000/api/employe",  formdata, config)
+    return axios.post("https://hair-api-main-production.up.railway.app/api/employe",  formdata, config)
 }
 
 
@@ -92,10 +92,10 @@ export function create_type_coif_salon(name, description, nb_employe, category,p
     formdata.append("price", price)
     formdata.append("image", image)
         formdata.append("coiffure_id", coiffure_id)
-    return axios.post("http://127.0.0.1:8000/api/hairstyle",  formdata, config)
+    return axios.post("https://hair-api-main-production.up.railway.app/api/hairstyle",  formdata, config)
 }
 export function acce_coif(hairstyle_type_id, salon_id,  accessory_id, nb_accessory){
-    return axios.post("http://127.0.0.1:8000/api/accessoirehairstyle", {
+    return axios.post("https://hair-api-main-production.up.railway.app/api/accessoirehairstyle", {
         hairstyle_type_id: hairstyle_type_id,
         salon_id: salon_id,
         accessory_id: accessory_id,
@@ -105,7 +105,7 @@ export function acce_coif(hairstyle_type_id, salon_id,  accessory_id, nb_accesso
 } 
 
 export function emp_coif(hairstyle_type_id,  employe_id, duration){
-    return axios.post("http://127.0.0.1:8000/api/employehairstyles", {
+    return axios.post("https://hair-api-main-production.up.railway.app/api/employehairstyles", {
         hairstyle_type_id: hairstyle_type_id,
         employe_id: employe_id,
         duration: duration,
@@ -114,14 +114,14 @@ export function emp_coif(hairstyle_type_id,  employe_id, duration){
 } 
 
 export const getAvailableEmployees = () => {
-    return fetch("http://127.0.0.1:8000/api/rdv", config).then(response => response.json());
+    return fetch("https://hair-api-main-production.up.railway.app/api/rdv", config).then(response => response.json());
    };
    
    export function create_rdv(date_and_time, notes, hairstyle_type_id, price, usesOwnAccessories, accessories, employes, selectedHour) {
     // Concaténer la date et l'heure ici
     const datetime = `${date_and_time.split('T')[0]} ${selectedHour}`;
   
-    return axios.post("http://127.0.0.1:8000/api/rdv", {
+    return axios.post("https://hair-api-main-production.up.railway.app/api/rdv", {
       date_and_time: datetime,
       notes: notes,
       hairstyle_type_id: hairstyle_type_id,
@@ -134,12 +134,12 @@ export const getAvailableEmployees = () => {
   
   
 export function storeEvaluation (note , comment , id_service_history,user_id)  {
-    return axios.post("http://127.0.0.1:8000/api/review", { note,comment,id_service_history,user_id },config);
+    return axios.post("https://hair-api-main-production.up.railway.app/api/review", { note,comment,id_service_history,user_id },config);
   };
 
 
   export function accessoire( name, description,  price) {
-    return axios.post("http://127.0.0.1:8000/api/accessory", {
+    return axios.post("https://hair-api-main-production.up.railway.app/api/accessory", {
         name: name,
         description: description,
         price: price,
@@ -148,13 +148,13 @@ export function storeEvaluation (note , comment , id_service_history,user_id)  {
 }
 
 export const getCoiffures = () => {
-    return axios.get('http://127.0.0.1:8000/api/hairstyle', config);
+    return axios.get('https://hair-api-main-production.up.railway.app/api/hairstyle', config);
 };
 
 export const getAccessoires = () => {
-    return axios.get('http://127.0.0.1:8000/api/accessory', config);
+    return axios.get('https://hair-api-main-production.up.railway.app/api/accessory', config);
 };
 
 export const assignAccessoireToCoiffure = (data) => {
-    return axios.post('http://127.0.0.1:8000/api/assign-accessoire', data);
+    return axios.post('https://hair-api-main-production.up.railway.app/api/assign-accessoire', data);
 };

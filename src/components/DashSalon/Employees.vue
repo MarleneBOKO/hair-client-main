@@ -13,7 +13,7 @@ const toast = useToast();
 
 onMounted(async () => {
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/salon_employes', config);
+        const response = await fetch('https://hair-api-main-production.up.railway.app/api/salon_employes', config);
         const data = await response.json();
         employees.value = data.data;
     } catch (error) {
@@ -28,7 +28,7 @@ const onDelete = async (id) => {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/employe/${id}`, {
+        const response = await fetch(`https://hair-api-main-production.up.railway.app/api/employe/${id}`, {
             method: 'DELETE',
             headers: {
                 ...config.headers,
@@ -49,7 +49,7 @@ const onDelete = async (id) => {
 
 const fetchEmployees = async () => {
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/salon_employes', config);
+        const response = await fetch('https://hair-api-main-production.up.railway.app/api/salon_employes', config);
         const data = await response.json();
         employees.value = data.data;
     } catch (error) {

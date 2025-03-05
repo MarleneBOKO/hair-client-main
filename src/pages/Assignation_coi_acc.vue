@@ -19,7 +19,7 @@ const assignedAccessories = ref(new Set()); // Utiliser un Set pour suivre les a
 
 const loadHairstylesAndAccessories = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/salonhairstyleandaccessory', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/salonhairstyleandaccessory', config);
     coiffures.value = response.data.coiffures;
     accessoires.value = response.data.accessoires;
     console.log('Coiffures et accessoires chargés:', coiffures.value);
@@ -51,7 +51,7 @@ const submitAccessory = async () => {
 
   if (id_hairstyle_type && salon_id && id_accessory && nb_accessory) {
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/accessoirehairstyle', {
+      const response = await axios.post('https://hair-api-main-production.up.railway.app/api/accessoirehairstyle', {
         hairstyle_type_id: id_hairstyle_type,
         salon_id: salon_id,
         accessory_id: id_accessory,
@@ -101,7 +101,7 @@ onMounted(() => {
           <div v-for="coiffure in coiffures" :key="coiffure.id_hairstyle_type" class="flex-col items-center">
             <div class="grid grid-cols-2 gap-4">
               <div @click="selectHairstyle(coiffure)" class="flex flex-col items-center cursor-pointer">
-                <img :src="`http://127.0.0.1:8000/storage/${coiffure.image}`" :alt="coiffure.name" class="object-cover w-32 h-32 mb-2 rounded-lg cursor-pointer">
+                <img :src="`https://hair-api-main-production.up.railway.app/storage/${coiffure.image}`" :alt="coiffure.name" class="object-cover w-32 h-32 mb-2 rounded-lg cursor-pointer">
                 <span class="text-sm font-medium">{{ coiffure.name }}</span>
                 <span class="text-sm text-gray-600">{{ coiffure.price }} CFA</span>
               </div>

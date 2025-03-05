@@ -32,7 +32,7 @@ function closeModal() {
 
 const fetchAccompte = async (id) => {
 try {
-  const response = await axios.get(`http://127.0.0.1:8000/api/getAccompte/${id}`, config);
+  const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getAccompte/${id}`, config);
   accompte.value = response.data.accompte;
   console.log(accompte.value);
 } catch (error) {
@@ -74,7 +74,7 @@ function paynow() {
 
 async function sendTransactionId(transactionId, id_appointment) {
   try {
-    await axios.post(`http://127.0.0.1:8000/api/initiatePayment/${transactionId}/${id_appointment}`, {}, config);
+    await axios.post(`https://hair-api-main-production.up.railway.app/api/initiatePayment/${transactionId}/${id_appointment}`, {}, config);
     console.log('ID de transaction et ID de rendez-vous envoyés avec succès.');
     router.push('/')
     toast.success("Payement Valider", {

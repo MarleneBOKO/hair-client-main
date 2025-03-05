@@ -66,7 +66,7 @@ const router = useRouter();
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/user', {
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/user', {
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token")
       }

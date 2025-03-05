@@ -30,7 +30,7 @@ const config = {
 // Fonction pour récupérer les informations du salon
 const getSalonInfos = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/getInfoSalons', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/getInfoSalons', config);
     salonInfos.value = response.data;
     console.log(salonInfos.value);
   } catch (error) {
@@ -41,7 +41,7 @@ const getSalonInfos = async () => {
 // Fonction pour récupérer les détails des salons
 const getSalonDetails = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/detailsalon', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/detailsalon', config);
     console.log(response); // Vérifiez la réponse dans la console
     detailsalons.value = response.data;
     console.log(detailsalons.value);
@@ -59,7 +59,7 @@ const userName = ref('');
 
 onMounted(async () => {
  try {
-    const response = await axios.get('http://127.0.0.1:8000/api/user', {
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/user', {
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token")
       }

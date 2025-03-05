@@ -47,9 +47,9 @@ const selectedImage = ref(null);
 // Fonction pour charger les images selon la catégorie
 const loadImages = async () => {
   try {
-    const response = await axios.get(`http://127.0.0.1:8000/api/coiffure?category=${selectedCategory.value}`, config);
+    const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/coiffure?category=${selectedCategory.value}`, config);
     imagesByCategory.value[selectedCategory.value] = response.data.data.map(item => ({
-      image: `http://127.0.0.1:8000/storage/${item.image}`,
+      image: `https://hair-api-main-production.up.railway.app/storage/${item.image}`,
       alt: item.name,
       name: item.name,
       description: item.description,

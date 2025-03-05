@@ -50,7 +50,7 @@ const router = useRouter();
 
 onMounted(async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/salon_coiffures', {
+    const response = await fetch('https://hair-api-main-production.up.railway.app/api/salon_coiffures', {
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token")
       }
@@ -58,7 +58,7 @@ onMounted(async () => {
     const data = await response.json();
     hairstyles.value = data.data.map(item => ({
       ...item,
-      image: `http://127.0.0.1:8000/storage/${item.image}` 
+      image: `https://hair-api-main-production.up.railway.app/storage/${item.image}` 
     }));
   } catch (error) {
     console.error('Error fetching hairstyles:', error);
@@ -74,7 +74,7 @@ const confirmDelete = (id) => {
 
 const onDelete = async (id) => {
   try {
-    const response = await fetch(`http://127.0.0.1:8000/api/hairstyle/${id}`, {
+    const response = await fetch(`https://hair-api-main-production.up.railway.app/api/hairstyle/${id}`, {
       method: 'DELETE',
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token")

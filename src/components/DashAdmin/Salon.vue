@@ -26,7 +26,7 @@ const config = {
 // Fonction pour récupérer les informations du salon
 const getSalonInfos = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/getInfoSalons', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/getInfoSalons', config);
     salonInfos.value = response.data;
     console.log(salonInfos.value);
   } catch (error) {
@@ -37,7 +37,7 @@ const getSalonInfos = async () => {
 // Fonction pour récupérer les détails des salons
 const getSalonDetails = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/detailsalon', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/detailsalon', config);
     detailsalons.value = response.data;
     id_salon.value = detailsalons.value.id_salon;
     console.log(id_salon.value);
@@ -55,7 +55,7 @@ const viewSalonDetails = (id_salon) => {
 
 const activateSalon = async (id) => {
   try {
-    const response = await axios.post('http://127.0.0.1:8000/api/salon/activate/${id}', {}, config);
+    const response = await axios.post('https://hair-api-main-production.up.railway.app/api/salon/activate/${id}', {}, config);
     console.log(response.data.message);
     getSalonDetails(); // Mettre à jour la liste des salons
   } catch (error) {

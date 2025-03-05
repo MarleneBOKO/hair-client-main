@@ -38,15 +38,15 @@ function closeModal() {
 }
 
 function changeMainImage(imagePath) {
-  mainImage.value = `http://127.0.0.1:8000/storage/${imagePath}`;
+  mainImage.value = `https://hair-api-main-production.up.railway.app/storage/${imagePath}`;
 }
 
 onMounted(() => {
-  mainImage.value = `http://127.0.0.1:8000/storage/${props.imagePath}`;
+  mainImage.value = `https://hair-api-main-production.up.railway.app/storage/${props.imagePath}`;
 });
 
 watch(() => props.imagePath, (newImagePath) => {
-  mainImage.value = `http://127.0.0.1:8000/storage/${newImagePath}`;
+  mainImage.value = `https://hair-api-main-production.up.railway.app/storage/${newImagePath}`;
 });
 
 function navigateToReservationWithDetails(id_salon, id_hairstyle_type, price, percent, image1, image2, imagePath) {
@@ -54,8 +54,8 @@ function navigateToReservationWithDetails(id_salon, id_hairstyle_type, price, pe
     console.error("Missing required param 'id_salon'");
     return;
   }
-  const completeImagePath1 = `http://127.0.0.1:8000/storage/coiffure_store/others_images/femme/${image1}`;
-  const completeImagePath2 = `http://127.0.0.1:8000/storage/coiffure_store/others_images/femme/${image2}`;
+  const completeImagePath1 = `https://hair-api-main-production.up.railway.app/storage/coiffure_store/others_images/femme/${image1}`;
+  const completeImagePath2 = `https://hair-api-main-production.up.railway.app/storage/coiffure_store/others_images/femme/${image2}`;
   localStorage.setItem("imagePath", imagePath);
   localStorage.setItem("image1", completeImagePath1);
   localStorage.setItem("image2", completeImagePath2);

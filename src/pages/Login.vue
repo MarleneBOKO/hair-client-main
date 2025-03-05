@@ -23,7 +23,7 @@ let tokenFieldVisible = ref(false);
 
 const handlePostLoginRedirect = async () => {
     try {
-        const response = await axios.get('http://127.0.0.1:8000/api/getUserType', {
+        const response = await axios.get('https://hair-api-main-production.up.railway.app/api/getUserType', {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }

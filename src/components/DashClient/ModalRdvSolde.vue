@@ -32,7 +32,7 @@ function closeModal() {
 
 const fetchmontant_restant = async (id) => {
 try {
-  const response = await axios.get(`http://127.0.0.1:8000/api/getmontantrestant/${id}`, config);
+  const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getmontantrestant/${id}`, config);
   montant_restant.value = response.data.montant_restant;
   console.log(montant_restant.value);
 } catch (error) {
@@ -74,7 +74,7 @@ function paynow() {
 
 async function sendTransactionId(transactionId, id_appointment) {
   try {
-    await axios.post(`http://127.0.0.1:8000/api/solderdv/${transactionId}/${id_appointment}`, {}, config);
+    await axios.post(`https://hair-api-main-production.up.railway.app/api/solderdv/${transactionId}/${id_appointment}`, {}, config);
     console.log('ID de transaction et ID de rendez-vous envoyés avec succès.');
     router.push('/reservationclient')
     toast.success("Payement Valider", {

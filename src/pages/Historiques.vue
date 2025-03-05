@@ -13,7 +13,7 @@ const services = ref([]);
 
 const fetchServices = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/client-services', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/client-services', config);
     services.value = response.data.servicedata;
   } catch (error) {
     console.error('Erreur lors de la récupération des services:', error);

@@ -32,8 +32,8 @@ function navigateToReservationWithDetails(id_salon, id_hairstyle_type, price,  p
   }
   
 
-  const completeImagePath1 = `http://127.0.0.1:8000/storage/${image1}`;
-  const completeImagePath2 = `http://127.0.0.1:8000/storage/${image2}`;
+  const completeImagePath1 = `https://hair-api-main-production.up.railway.app/storage/${image1}`;
+  const completeImagePath2 = `https://hair-api-main-production.up.railway.app/storage/${image2}`;
   
   localStorage.setItem("imagePath", imagePath);
   localStorage.setItem("image1", completeImagePath1);

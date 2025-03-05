@@ -21,7 +21,7 @@ console.log("ID du salon:", salon_id);
 
 const getSalonDetails = async () => {
   try {
-    const response = await axios.get(`http://127.0.0.1:8000/api/getsalondata/${salon_id}`, config);
+    const response = await axios.get(`https://hair-api-main-production.up.railway.app/api/getsalondata/${salon_id}`, config);
     salon.value = response.data.data;
     console.log("Détails du salon:", salon.value);
   } catch (error) {
@@ -30,7 +30,7 @@ const getSalonDetails = async () => {
 };
 const activateSalon = async () => {
   try {
-    const response = await axios.put(`http://127.0.0.1:8000/api/ActiveSalon/${salon_id}`, {}, config);
+    const response = await axios.put(`https://hair-api-main-production.up.railway.app/api/ActiveSalon/${salon_id}`, {}, config);
     console.log(response.data.message);
     router.push('/dashboardad');
   } catch (error) {
@@ -54,11 +54,11 @@ onMounted(() => {
      
       <div v-if="salon.photo1 || salon.photo2" class="flex justify-center gap-4">
         <div class="flex flex-col gap-3 justify-between">
-          <img v-if="salon.photo1" :src="`http://127.0.0.1:8000/storage/${salon.photo1}`" alt="Photo 1" class="object-cover w-64 h-64 rounded-lg shadow-lg">
+          <img v-if="salon.photo1" :src="`https://hair-api-main-production.up.railway.app/storage/${salon.photo1}`" alt="Photo 1" class="object-cover w-64 h-64 rounded-lg shadow-lg">
           <span>Photo 1</span>
           </div>
           <div class="flex flex-col gap-3 justify-between">
-            <img v-if="salon.photo2" :src="`http://127.0.0.1:8000/storage/${salon.photo2}`" alt="Photo 2" class="object-cover w-64 h-64 rounded-lg shadow-lg">
+            <img v-if="salon.photo2" :src="`https://hair-api-main-production.up.railway.app/storage/${salon.photo2}`" alt="Photo 2" class="object-cover w-64 h-64 rounded-lg shadow-lg">
             <span>Photo 2</span>
           </div>
       </div>

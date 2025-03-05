@@ -16,7 +16,7 @@
   
   const fetchRendezVous = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/rdv', config);
+      const response = await axios.get('https://hair-api-main-production.up.railway.app/api/rdv', config);
       rendezVous.value = response.data.data;
     } catch (error) {
       console.error('Erreur lors de la récupération des rendez-vous:', error);
@@ -38,7 +38,7 @@
   
   const terminerRdv = async (rdv) => {
     try {
-      await axios.put(`http://127.0.0.1:8000/api/rdv/${rdv.id_appointment}`, { status: 'Terminé' }, config);
+      await axios.put(`https://hair-api-main-production.up.railway.app/api/rdv/${rdv.id_appointment}`, { status: 'Terminé' }, config);
       console.log('Rendez-vous marqué comme terminé avec succès.');
       fetchRendezVous(); // Rafraîchir la liste des rendez-vous après la mise à jour
     } catch (error) {

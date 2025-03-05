@@ -16,7 +16,7 @@ const config = {
 
 const fetchRendezVous = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/rdv', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/rdv', config);
     rendezVous.value = response.data.data;
   } catch (error) {
     console.error('Erreur lors de la récupération des rendez-vous:', error);
@@ -30,7 +30,7 @@ const solderRdv = (rdv) => {
 
 const annulerRdv = async (rdv) => {
   try {
-    await axios.delete(`http://127.0.0.1:8000/api/rdv/${rdv.id_appointment}`, config);
+    await axios.delete(`https://hair-api-main-production.up.railway.app/api/rdv/${rdv.id_appointment}`, config);
     // Retirer le rendez-vous annulé de la liste locale
     rendezVous.value = rendezVous.value.filter(r => r.id_appointment !== rdv.id_appointment);
     alert('Rendez-vous annulé avec succès.');

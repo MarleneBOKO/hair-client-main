@@ -12,7 +12,7 @@ const config = {
 const clientData = ref(null);
 
 onMounted(() => {
-    axios.get('http://127.0.0.1:8000/api/client', config)
+    axios.get('https://hair-api-main-production.up.railway.app/api/client', config)
         .then(response => {
             clientData.value = response.data.data;
         })

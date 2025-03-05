@@ -14,7 +14,7 @@ const rendezVous = ref([]);
 
 const fetchRendezVous = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:8000/api/rdv', config);
+    const response = await axios.get('https://hair-api-main-production.up.railway.app/api/rdv', config);
     rendezVous.value = response.data.data; // Assurez-vous que la structure des données correspond à ce qui est utilisé ici
   } catch (error) {
     console.error('Erreur lors de la récupération des rendez-vous:', error);
